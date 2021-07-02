@@ -23,24 +23,32 @@
   </audio>
 </head>
 <body>
-  <div id="outer-circle">
-    <div id="topleft"></div>
-    <div id="topright"></div>
-    <div id="bottomleft"></div>
-    <div id="bottomright"></div>
-    <div id="inner-circle">
-      <div id="title" class="font-effect-emboss">SIMON!</div>
-      <div id="switches">
-        <input type="checkbox" class="toggle" id="on">
-        <button class="button" id="start">Start</button>
-        <input type="checkbox" class="toggle" id="strict">
+  <div class="container">
+    <div id="outer-circle">
+      <div id="topleft"></div>
+      <div id="topright"></div>
+      <div id="bottomleft"></div>
+      <div id="bottomright"></div>
+      <div id="inner-circle">
+        <div id="title" class="font-effect-emboss">SIMON</div>
+        <div id="switches">
+          <div class="power">
+            <input type="checkbox" class="toggle" id="on"/>
+            <span>POWER</span>
+          </div>
+          <button class="button" id="start">START</button>
+          <div class="strict">
+            <input type="checkbox" class="toggle" id="strict"/>
+            <span>STRICT</span>
+          </div>
+        </div>
+        <div class='count'>
+          <div id="turn"></div> 
+          <span>
+          COUNT
+          </span>
       </div>
-      <div class="text1">
-        <span>POWER</span><span>STRICT</span>
-      </div>
-      <div id="turn"></div> 
-      <div class="text2">
-        COUNT
+        
       </div>
     </div>
   </div>

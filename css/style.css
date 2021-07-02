@@ -1,163 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
 body {
-  background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/nasty_fabric.png);
-}
-
-.toggle {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.button {
-  border-radius: 50% !important;
-  font-size: 1.5em;
-  background-color: lightgray;
-}
-
-#switches {
-  position: absolute;
+  font-size: 10px;
   font-family: 'Original Surfer', cursive;
-  margin-left: 26px;
-  margin-top: 110px;
 }
 
-.text2 {
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+}
+#outer-circle {
   position: absolute;
-  font-family: 'Original Surfer', cursive;
-  margin-left: 83px;
-  margin-top: 197px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 30rem;
+  background: #385a94;
+  border-radius: 50%;
+  box-shadow: 8px 8px 15px 5px #888888;
+}
+#topright,
+#topleft,
+#bottomright,
+#bottomleft {
+  height: 15rem;
+  width: 15rem;
+  border: 0.2rem solid;
 }
 
-.text1 {
+#topleft {
+  border-top-left-radius: 25rem;
+  background: darkgreen;
+}
+#topright {
+  border-top-right-radius: 25rem;
+  background: darkred;
+}
+#bottomleft {
+  border-bottom-left-radius: 25rem;
+  background: goldenrod;
+}
+#bottomright {
+  border-bottom-right-radius: 25rem;
+  background: darkblue;
+}
+
+#inner-circle {
+  justify-self: center;
   position: absolute;
-  font-family: 'Original Surfer', cursive;
-  margin-left: 19px;
-  margin-top: 142px;
-}
-
-.text1 span:last-child {
-  padding-left: 70px;
+  z-index: 2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  border: 0.3rem solid;
 }
 
 #title {
-  font-family: 'Original Surfer', cursive;
-  position: absolute;
-  font-size: 40px;
-  margin-left: 35px;
-  margin-top: 40px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#switches {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.power,
+.strict,
+.count {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 #turn {
-  position: absolute;
   background: #330000;
   color: red;
   font-family: courier;
   font-size: 20px;
   height: 30px;
   width: 50px;
-  margin-left: 90px;
-  margin-top: 170px;
+  margin-top: 1rem;
   text-align: center;
   vertical-align: middle;
   line-height: 30px;
 }
 
-#outer-circle {
-  background: #385a94;
-  border-radius: 50%;
-  height: 500px;
-  width: 500px;
-  position: relative;
-  border-style: solid;
-  border-width: 10px;
-  margin: auto;
-  margin-top: 60px;
-  box-shadow: 8px 8px 15px 5px #888888;
-}
+@media only screen and (min-width: 600px) {
+  #outer-circle {
+    width: 50rem;
+    height: 50rem;
+  }
 
-#topleft {
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 250px 0 0 0;
-  -moz-border-radius: 250px 0 0 0;
-  -webkit-border-radius: 250px 0 0 0;
-  background: darkgreen;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0px 0px -250px;
-  border-style: solid;
-  border-width: 5px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+  #topright,
+  #topleft,
+  #bottomright,
+  #bottomleft {
+    height: 25rem;
+    width: 25rem;
+    border: 0.4rem solid;
+  }
 
-#topright {
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 0 250px 0 0;
-  -moz-border-radius: 0 250px 0 0;
-  -webkit-border-radius: 0 250px 0 0;
-  background: darkred;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0px 0px 0px;
-  border-style: solid;
-  border-width: 5px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+  #inner-circle {
+    height: 25rem;
+    width: 25rem;
+    border: 0.5rem solid;
+  }
 
-#bottomleft {
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 0 0 0 250px;
-  -moz-border-radius: 0 0 0 250px;
-  -webkit-border-radius: 0 0 0 250px;
-  background: goldenrod;
-  top: 50%;
-  left: 50%;
-  margin: 0px -250px 0px -250px;
-  border-style: solid;
-  border-width: 5px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+  #title {
+    font-size: 4rem;
+  }
 
-#bottomright {
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 0 0 250px 0;
-  -moz-border-radius: 0 0 250px 0;
-  -webkit-border-radius: 0 0 250px 0;
-  background: darkblue;
-  top: 50%;
-  left: 50%;
-  margin: 0px 0px -250px 0px;
-  border-style: solid;
-  border-width: 5px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
+  .power,
+  .strict,
+  .count {
+    font-size: 1.5rem;
+  }
 
-#inner-circle {
-  position: absolute;
-  background: grey;
-  border-radius: 50%;
-  height: 250px;
-  width: 250px;
-  border-style: solid;
-  border-width: 10px;
-  top: 50%;
-  left: 50%;
-  margin: -125px 0px 0px -125px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  #turn {
+    font-size: 2rem;
+    height: 3rem;
+    width: 5rem;
+    line-height: 3rem;
+  }
 }
